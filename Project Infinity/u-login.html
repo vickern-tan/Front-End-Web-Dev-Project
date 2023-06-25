@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1" , minimum-scale="1" />
+    <title>Infinity Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="pict/infinity.ico" />
+
+    <!--
+                External Css file linking
+            -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--
+                Importing font awesome link
+            -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!--
+                Importing Bootstrap
+            -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+        
+    <!--
+                Importing Swiper
+            -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+</head>
+
+<body>
+
+    <!--
+            Header Section
+        -->
+
+        <section class="header">
+
+            <a href="#" class="logo"><img src="pict/infinity.png" class="logo" alt="infinity-logo"></a>
+    
+            <nav class="navbar">
+                <a href="index.html">Back</a>
+            </nav>
+    
+    
+            <div id="menu-slider-btn" class="fa-solid fa-bars"></div>
+    
+        </section>
+
+
+
+    <!--
+        Login Section
+    -->
+    <section class="logregcontainer">
+        <div class="login-reg-panel">
+            <div class="login-info-box">
+                <h2>Have an account?</h2>
+                <p>Login to the website now!</p>
+                <label id="label-register" for="log-reg-show">Login</label>
+                <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+            </div>
+
+            <div class="register-info-box">
+                <h2>Don't have an account?</h2>
+                <p>Create a new account to enjoy newbie offer!</p>
+                <label id="label-login" for="log-login-form">Register</label>
+                <input type="radio" name="active-log-panel" id="log-login-form">
+            </div>
+
+            <div class="white-panel">
+                <form id="login" class="login-form" method="post">
+                    <h2>LOGIN</h2>
+                    <input type="text" id="LI_userID" class="inputfield" placeholder="Username" required>
+                    <input type="password" id="LI_password" class="inputfield" placeholder="Password" required>
+                    <input type="submit" id="login-btn" class="main-btn" value="Login">
+
+                    <div class="login-as-guest">
+                        <a href="" name="guest-login" id="guest-login" class="guest-login">Login as guest</a>
+                    </div>
+
+                    <div class="passwordReset" id="forget">
+                        <a href="" class="forgetPass">Forgot password?</a>
+                    </div>
+
+                    <div class="DeleteAcc" id="delete">
+                        <a href="" class="claerStorage">Delete Account?</a>
+                    </div>
+                </form>
+
+                <form id="signup" class="register-form" method="post">
+                    <h2>REGISTER</h2>
+                    <input type="text" class="inputfield" id="SU_userID" placeholder="Username" required>
+                    <input type="email" class="inputfield" id="SU_emailadd" placeholder="Email" required>
+                    <input type="password" class="inputfield" id="SU_password" placeholder="Password" required
+                        pattern="[0-9]{5}" oninvalid="this.setCustomValidity('Error: Password must be only 5 numbers!')"
+                        oninput="this.setCustomValidity('')">
+                    <input type="password" class="inputfield" id="SU_confpass" placeholder="Confirm Password" required
+                        pattern="[0-9]{5}" oninvalid="this.setCustomValidity('Error: Password must be only 5 numbers!')"
+                        oninput="this.setCustomValidity('')">
+
+                    <div class="TC-checkbox">
+                        <input type="checkbox" name="agree" id="agree" class="checkboxG">
+                        <label for="agree">Agree to the terms & conditions</label>
+                    </div>
+
+                    <div class="SP-checkbox">
+                        <input type="checkbox" onclick="showPassword()" name="signup-show-pass" id="signup-show-pass" class="checkboxG">
+                        <label for="signup-show-pass">Show password</label>
+                    </div>
+                    <input type="submit" id="SU_submit" class="main-btn" value="Register">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- 
+        Footer Section  
+        -->
+
+        <section class="footer">
+
+            <div class="icons-container">
+    
+                <div class="icons">
+                    <i class="fa-regular fa-clock-four"></i>
+                    <h3>opening hours</h3>
+                    <p>07:00am to 10:00pm</p>
+                </div>
+    
+                <div class="icons">
+                    <a href="tel:+6016-288-7111"><i class="fas fa-phone"></i></a>
+                    <h3>phone</h3>
+                    <a href="tel:+6016-288-7111">+6016-288-7111</a>
+                    <br>
+                    <a href="tel:+6016-288-7111">+6011-1086-1617</a>
+                </div>
+    
+                <div class="icons">
+                    <i class="fas fa-envelope"></i>
+                    <h3>email</h3>
+                    <a href="mailto:infinitycafegmail.com">infinitycafegmail.com</a>
+                </div>
+    
+                <div class="icons">
+                    <a href="map.html"><i class="fas fa-map"></i></a>
+                    <h3>address</h3>
+                    <a href="map.html">Infinity Cafe, 8A Marina Boulevard #B2, #11, Singapore 018984</a>
+                </div>
+    
+            </div>
+    
+            <div class="social-media">
+                <a href="https://www.facebook.com/Infinity-Cafe-1504661633097288/" class="fa-brands fa-square-facebook"></a>
+                <a href="#" class="fa-brands fa-whatsapp"></a>
+                <a href="https://www.instagram.com/infinity.cafeandresto/" class="fab fa-instagram"></a>
+                <a href="https://uk.linkedin.com/in/infinity-cafe-60555526" class="fab fa-linkedin"></a>
+            </div>
+    
+            <div class="feedbackcontainer">
+                <a href="feedback.html">Write a feedback to us!</a>
+            </div>
+    
+            <div class="credited-by"> by <span>Group Infinity</span> | 2022</div>
+    
+        </section>
+
+
+    
+    <script src="js/login.js"></script>
+
+
+    <!--
+        External js file linking
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.login-info-box').fadeOut();
+            $('.login-form').addClass('show-log-panel');
+        });
+
+
+        $('.login-reg-panel input[type="radio"]').on('change', function () {
+            if ($('#log-login-form').is(':checked')) {
+                $('.register-info-box').fadeOut();
+                $('.login-info-box').fadeIn();
+
+                $('.white-panel').addClass('right-log');
+                $('.register-form').addClass('show-log-panel');
+                $('.login-form').removeClass('show-log-panel');
+
+            }
+            else if ($('#log-reg-show').is(':checked')) {
+                $('.register-info-box').fadeIn();
+                $('.login-info-box').fadeOut();
+
+                $('.white-panel').removeClass('right-log');
+
+                $('.login-form').addClass('show-log-panel');
+                $('.register-form').removeClass('show-log-panel');
+            }
+        });
+    </script>
+</body>
+
+</html>
