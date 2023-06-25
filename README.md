@@ -49,4 +49,4 @@ For any inquiries or feedback, please contact:
 
 Vickern 
 Email: vickern01@gmail.com  
-LinkedIn: linkedin.com/in/vickern-tan-83282224b
+LinkedIn: www.linkedin.com/in/vickern-tan-83282224b
