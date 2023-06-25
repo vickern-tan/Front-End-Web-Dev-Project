@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1" , minimum-scale="1" />
+    <title>Infinity Restaurant</title>
+    <link rel="icon" type="image/x-icon" href="pict/infinity.ico" />
+
+    <!--
+                External Css file linking
+            -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--
+                Importing font awesome link
+            -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!--
+                Importing Bootstrap
+            -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+
+    <!--
+                Importing Swiper
+            -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+</head>
+
+<body>
+
+    <!--
+            Header Section
+        -->
+
+    <section class="header">
+
+        <a href="index.html" class="logo"><img src="pict/infinity.png" class="logo" alt="infinity-logo"></a>
+
+        <nav class="navbar">
+            <a href="index.html">Back</a>
+        </nav>
+
+        <div id="menu-slider-btn" class="fas fa-bars"></div>
+
+    </section>
+
+
+
+    <!--
+        Converter Section
+    -->
+    <section class="converterContainer">
+        <!--<div class="login-reg-panel">-->
+        <div class="convertPart col-12">
+            <div class="card mb-5 mt-5">
+                <div class="card-body">
+                    <h1>Currency Converter</h1>
+                    <p>Hi,Foreign Student? No Worry! Try to Use our currency converter!</p>
+                    <div class="converter">
+                        <span>MYR</span>
+                        <input type="number" name="myr-amount" id="myr-amount">
+                        <button id="converter-button" class="btn btn-primary">Convert!</button>
+                        <select id="currency-change">
+                            <option value="CNY">CNY</option>
+                            <option value="SGD">SGD</option>
+                            <option value="JPY">JPY</option>
+                            <option value="USD">USD</option>
+                        </select>
+                        <span id="result"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="card mb-5 mt-5">
+                <div class="card-body" style="text-align:center;">
+                    <h1>Currency Converter's History</h1>
+                    <table class="historyTable" style=" margin-left: auto; margin-right: auto;">
+                        <thead>
+                            <th>MRY(RM)</th>
+                            <th class="col-6">Currency</th>
+                            <th>Result</th>
+                        </thead>
+                        <tbody id="printHistory">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--</div>-->
+    </section>
+
+
+    <!-- 
+        Footer Section  
+        -->
+
+    <section class="footer">
+
+        <div class="icons-container">
+
+            <div class="icons">
+                <i class="fa-regular fa-clock-four"></i>
+                <h3>opening hours</h3>
+                <p>07:00am to 10:00pm</p>
+            </div>
+
+            <div class="icons">
+                <a href="tel:+6016-288-7111"><i class="fas fa-phone"></i></a>
+                <h3>phone</h3>
+                <a href="tel:+6016-288-7111">+6016-288-7111</a>
+                <br>
+                <a href="tel:+6016-288-7111">+6011-1086-1617</a>
+            </div>
+
+            <div class="icons">
+                <i class="fas fa-envelope"></i>
+                <h3>email</h3>
+                <a href="mailto:infinitycafegmail.com">infinitycafegmail.com</a>
+            </div>
+
+            <div class="icons">
+                <a href="map.html"><i class="fas fa-map"></i></a>
+                <h3>address</h3>
+                <a href="map.html">Infinity Cafe, 8A Marina Boulevard #B2, #11, Singapore 018984</a>
+            </div>
+
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.facebook.com/Infinity-Cafe-1504661633097288/" class="fa-brands fa-square-facebook"></a>
+            <a href="#" class="fa-brands fa-whatsapp"></a>
+            <a href="https://www.instagram.com/infinity.cafeandresto/" class="fab fa-instagram"></a>
+            <a href="https://uk.linkedin.com/in/infinity-cafe-60555526" class="fab fa-linkedin"></a>
+        </div>
+
+        <div class="feedbackcontainer">
+            <a href="feedback.html">Write a feedback to us!</a>
+        </div>
+
+        <div class="credited-by"> by <span>Group Infinity</span> | 2022</div>
+
+    </section>
+
+
+    <!--
+        External js file linking
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.login-info-box').fadeOut();
+            $('.login-form').addClass('show-log-panel');
+        });
+
+
+        $('.login-reg-panel input[type="radio"]').on('change', function () {
+            if ($('#log-login-form').is(':checked')) {
+                $('.register-info-box').fadeOut();
+                $('.login-info-box').fadeIn();
+
+                $('.white-panel').addClass('right-log');
+                $('.register-form').addClass('show-log-panel');
+                $('.login-form').removeClass('show-log-panel');
+
+            }
+            else if ($('#log-reg-show').is(':checked')) {
+                $('.register-info-box').fadeIn();
+                $('.login-info-box').fadeOut();
+
+                $('.white-panel').removeClass('right-log');
+
+                $('.login-form').addClass('show-log-panel');
+                $('.register-form').removeClass('show-log-panel');
+            }
+        });
+    </script>
+
+    <script>
+        var storeMRY = [];
+        var storeResult = [];
+        $(document).ready(function () {
+            $("#converter-button").click(function () {
+                $.get("https://v6.exchangerate-api.com/v6/c7e7f24568b1a6c426bcf015/latest/MYR", function (data, status) {
+                    //getting value from input with id=myr-amount and put into myr_amount variable.
+                    var myr_amount = parseFloat($("#myr-amount").val());
+                    var chosen_currency = $("#currency-change").val();
+                    //store myr to usd conversion rate into var myr_to_usd_rate varialbe
+                    var conversion_rates = data.conversion_rates[chosen_currency];
+                    //convert myr to usd
+                    var result = myr_amount * conversion_rates;
+                    $("#result").text(chosen_currency + result.toFixed(2));
+                    storeCookie(myr_amount, chosen_currency, result);
+                });
+            });
+        });
+
+        function storeCookie(myr_amount, chosen_currency, result) {
+            var expDate = new Date();
+            expDate.setMinutes(expDate.getMinutes() + 10);
+            document.cookie = "MRY=" + myr_amount + ";expires=" + expDate.toUTCString();
+            document.cookie = "Country=" + chosen_currency + ";expires=" + expDate.toUTCString();
+            document.cookie = "Result=" + result.toFixed(2) + ";expires=" + expDate.toUTCString();
+
+            var printMRY = getCookie("MRY");
+            var printCountry = getCookie("Country");
+            var printResult = getCookie("Result");
+            if (printMRY != "" && printCountry != "" && printResult != "") {
+                document.getElementById("printHistory").innerHTML += "<tr><td>" + printMRY + "</td><td>" + printCountry +
+                    "</td><td>" + printResult + "</td></tr>";
+            }
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(";");
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+    </script>
+</body>
+
+</html>
