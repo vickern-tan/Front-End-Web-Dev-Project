@@ -24,8 +24,8 @@ Infinity Restaurant is a responsive and visually appealing website developed as 
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your_username/infinity-restaurant.git`
-2. Navigate to the project directory: `cd infinity-restaurant`
+1. Clone the repository: `git clone https://github.com/vickern-tan/Front-End-Web-Dev-Project.git`
+2. Navigate to the project directory: `cd Front-End-Web-Dev-Project`
 3. Open the `index.html` file in your preferred web browser.
 
 ## Usage
@@ -49,4 +49,4 @@ For any inquiries or feedback, please contact:
 
 Vickern 
 Email: vickern01@gmail.com  
-LinkedIn: www.linkedin.com/in/vickern-tan-83282224b
+LinkedIn: www.linkedin.com/in/vickern-tan
